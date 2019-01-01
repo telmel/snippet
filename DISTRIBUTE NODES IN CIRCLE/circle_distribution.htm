@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Circle</title>
+<style>
+html, body { height: 100%; margin: 0; border:0; }
+#container { width: 500px; height: 500px; background-color: DarkSeaGreen; box-sizing: border-box; position: relative; margin: auto; overflow: hidden !important; }
+.field { width: 20px; height: 20px; position: absolute; color: #fff; background-color:indigo;}
+</style>
+</head>
+<body>
+<div id="container">
+<svg class="sea" height="400" width="400">
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+  <circle class="circles" cx="10" cy="50" r="3" fill="#7336ed" />
+</svg>
+</div>
+
+<script type="text/javascript">
+
+var width = 250;   //  width - это координата центральной точки
+var height = 250;    //  height - это координата центральной точки
+var radius = 0.5 * width;  // здесь считаем радиус это 125 в данном случае
+
+var newNodeList = document.querySelectorAll('.circles'); // получили все узлы
+var seas = Array.from(newNodeList);  // создали массив узлов, так как только на массивах есть удобный метод Array.prototype.forEach
+
+var step = 2 * Math.PI / seas.length;  // это значение может быть 1.57 а может 0.26
+var angle = -90 * Math.PI / 180;  // это значение всегда равно -1.57
+
+// обработка массива. Вызываем неск раз функцию с аргументом - узел:
+// вычисляем x и y для каждого угла
+seas.forEach(function(element){
+	var x = width + radius * Math.cos(angle);
+    var y = height + radius * Math.sin(angle);
+	element.setAttribute('cx', x);
+	element.setAttribute('cy', y);
+    angle =  angle - step;
+});
+
+</script>
+
+</body>
+</html>

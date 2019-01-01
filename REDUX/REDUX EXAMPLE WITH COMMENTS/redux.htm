@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>Redux basic example</title>
+    <script src="redux.js"></script>
+  </head>
+  <body>
+	<div id="value">0</div>
+    <script>
+	
+	// Итак redux - это предсказуемый контейнер состояния для javascript приложений. 
+	// Он учит думать о приложении, как о начальном состоянии, которое изменяется последовательностью действий. 
+	
+	
+	
+	// 1. Импортируем функцию createStore из библиотеки Redux. 
+	// Так как мы подключили redux через cdn то это делать не надо
+	
+	// 2. Создаем функцию. Функция принимает текущее дерево состояния и екшен и возвращает следующее дерево состояния
+	// Это у нас тут редюсер - функция, которую передают в функцию createStore.
+	// В нашем случае функция counter - это редюсер
+	// Она будет изменять наш store
+	// Вообще, редюсеры это функции которые обрабатывают экшены и могут вносить изменения в состояние. 
+	
+	function counter(state, action) {
+		if (typeof state === 'undefined') { return 0 }
+		return state + 1;
+	}
+ 
+	// 3. Создадим новый store для нашего приложения и передадим ему редюсер как аргумент.
+	// В приложении должен быть только один store 
+	// Когда создается хранилище, Redux вызывает редьюсер и использует возвращаемые ими значения в качестве начального состояния. 
+	
+    // A store is just an object with a few methods on it. A store is not a class. A store holds the whole state tree of your application.
+    // The only way to change the state inside it is to dispatch an action on it.	
+	// To create it, pass your root reducing function to createStore.(https://redux.js.org/api-reference/store)
+	
+    var store = Redux.createStore(counter); 
+	
+	console.log(Object.getOwnPropertyNames(store));
+	
+	// 4. Выстрелили экшен с данными
+	// После действия пользователя - клик на страницу - нужно изменить состояние приложения.
+	// Единственный способ изменить состояние приложения или сайта — передать экшен. 
+	// Метод dispatch() отправляет в Redux объект, называемый action (экшен). 
+	
+	// Теперь давайте повесим addEventListener на страницу.
+	document.addEventListener('click', myfunction);
+	function myfunction() { store.dispatch(action) }
+	var action = { type: 'ADD', payload: 'Another smell' }
+      
+	// 5. Теперь нас интересует, как нам подписаться на изменение нашего store, чтобы знать,
+	// что у нас изменились данные в нем. Очень просто. Для этого у стора есть subscribe метод.
+    store.subscribe(news);
+	
+	function news() { document.getElementById('value').innerHTML = store.getState().toString();  }
+
+	console.log(store.getState());
+    // И первое, что нас интересует - это как выглядит наш store. Давайте законсолим его.
+    </script>
+  </body>
+</html>

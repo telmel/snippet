@@ -1,0 +1,1190 @@
+@import "https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i";
+@import "https://fonts.googleapis.com/css?family=Source+Code+Pro:500,700";
+@font-face {
+    font-family: "Fedra SansPro Demi";
+    src: url("fonts/FedraSansPro-Demi.woff") format("woff");
+}
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, dl, dt, dd, fieldset, form, label, legend {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+:focus {
+    outline: 0 none;
+}
+body {
+    background: transparent none repeat scroll 0 0;
+    color: black;
+    line-height: 1;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+@font-face {
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("fonts/Flaticon.woff") format("woff"), url("fonts/Flaticon.ttf") format("truetype"), url("fonts/Flaticon.svg#Flaticon") format("svg");
+}
+@media not all {
+@font-face {
+    font-family: "Flaticon";
+    src: url("fonts/Flaticon.svg#Flaticon") format("svg");
+}
+}
+[class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {
+    font-family: Flaticon;
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 0;
+}
+@media screen and (max-width: 600px) {
+[class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {
+    font-size: 2.66667vw;
+}
+}
+.flaticon-odnoklassniki-logo::before {
+    color: #fff;
+    content: "?";
+}
+.flaticon-facebook-logo::before {
+    color: #fff;
+    content: "?";
+}
+.flaticon-vk-logo::before {
+    color: #fff;
+    content: "?";
+}
+.flaticon-placeholder::before {
+    content: "?";
+}
+.submit {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #16c445 0%, #12a837 100%) repeat scroll 0 0;
+    border: medium none;
+    border-radius: 6px;
+    box-shadow: 0 12px 16px -8px rgba(18, 172, 57, 0.8);
+    color: #fff;
+    cursor: pointer;
+    font-family: "PT Sans",sans-serif;
+    font-size: 16px;
+    height: 50px;
+    width: 165px;
+}
+.submit:active {
+    background: rgba(0, 0, 0, 0) linear-gradient(to top, #16c445 0%, #12a837 100%) repeat scroll 0 0;
+}
+.submit.result {
+    box-shadow: -8px 7px 21px -8px rgba(0, 0, 0, 0.68);
+    font-size: 20px;
+    margin-bottom: -4px;
+    min-width: 167px;
+    text-align: center;
+    white-space: nowrap;
+}
+.submit.result a {
+    color: #fff;
+    text-decoration: none;
+}
+@media screen and (max-width: 414px) {
+.submit {
+    border-radius: 4px;
+}
+}
+input:focus {
+    border-color: #22bc35 !important;
+    color: #22bc35 !important;
+}
+input {
+    color: #000000 !important;
+}
+input::-moz-placeholder {
+    color: #a1a1a1;
+}
+input:-moz-placeholder {
+    color: #a1a1a1;
+}
+.form__holder {
+    background: white none repeat scroll 0 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0s;
+    width: 100%;
+}
+.form__holder.unique {
+    font-family: "PT Sans",sans-serif;
+    padding: 54px 100px 40px;
+}
+.form__holder.unique h3 {
+    color: #1a9f29;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+}
+.form__holder.unique .cup__holder {
+    display: flex;
+    padding-bottom: 30px;
+}
+.form__holder.unique .cup__holder span {
+    background-image: url("7b1cf2cc940825a1af49ddeb0d37b2dc.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 98px;
+    margin: auto;
+    width: 92px;
+}
+.form__holder.unique p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+.form__holder.unique .button__container {
+    display: flex;
+    padding-top: 30px;
+}
+.form__holder.unique .button__container button {
+    margin: auto;
+}
+.form__holder.concern {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.form__holder.concern .promo__holder p {
+    font-size: 13px;
+}
+.form__holder.concern .promo__holder .code__holder {
+    align-items: center;
+    background: #f2f2f2 none repeat scroll 0 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.form__holder.concern .promo__holder .code__holder span {
+    display: inline-block;
+    font-size: 11px;
+    margin-right: auto;
+}
+.form__holder.concern .promo__holder .code__holder .code {
+    color: #22bc35;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: auto;
+    text-align: center;
+}
+.form__holder.concern h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    white-space: pre-line;
+}
+.form__holder.concern h1.promo {
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-top: 25px;
+    text-align: left;
+    white-space: initial;
+}
+.form__holder.concern p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    white-space: pre-line;
+}
+.form__holder.concern p.error__message {
+    color: red;
+    font-size: 14px;
+    left: 62%;
+    padding: 0;
+    position: absolute;
+    top: 59px;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.form__holder.concern p.error__message:first-of-type {
+    left: 50%;
+}
+.form__holder.concern .input__holder--info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 24px 0 0;
+}
+.form__holder.concern .input__holder--info div {
+    position: relative;
+    width: 50%;
+}
+.form__holder.concern .input__holder--info div:first-of-type {
+    width: 100%;
+}
+.form__holder.concern .input__holder--info div:first-of-type input {
+    border-bottom: medium none;
+    max-width: 100%;
+    width: 100%;
+}
+.form__holder.concern .input__holder--info input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+    color: #a1a1a1;
+    font-size: 16px;
+    height: 40px;
+    max-width: 100%;
+    padding-left: 18px;
+    width: 100%;
+}
+.form__holder.concern .card__holder--select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    align-items: center;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-color: -moz-use-text-color #b7b7b7 #b7b7b7;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 36px 0 44px;
+    width: 100%;
+}
+.form__holder.concern .card__holder--select .switch__container {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    padding-left: 24px;
+}
+.form__holder.concern .card__holder--select .switch__container #true {
+    color: #bbbbbb;
+}
+.form__holder.concern .card__holder--select .switch__container #false {
+    color: #22bc35;
+}
+.form__holder.concern .card__holder--select .switch__container input[type="checkbox"] {
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.form__holder.concern .card__holder--select .switch__container label {
+    background: #22bc35 none repeat scroll 0 0;
+    border-radius: 100px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    margin: 0 8px 0 2px;
+    position: relative;
+    text-indent: -9999px;
+    width: 38px;
+}
+.form__holder.concern .card__holder--select .switch__container label::after {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 90px;
+    content: "";
+    height: 14px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 14px;
+}
+.form__holder.concern .card__holder--select .switch__container input:checked + label::after {
+    right: calc(20%);
+    transform: translateX(-100%);
+}
+.form__holder.concern .card__holder--select .card {
+    background: rgba(0, 0, 0, 0) url("32283028ab1fa29bb6c3ce4e7b112336.png") no-repeat scroll center center / contain ;
+    height: 60px;
+    margin: auto 0 auto auto;
+    width: 98px;
+}
+.form__holder.concern .button__parent__holder {
+    margin-top: auto;
+    width: 100%;
+}
+.form__holder.concern .button__holder {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.form__holder.concern .button__holder button {
+    font-size: 18px;
+    height: 56px;
+    min-width: 166px;
+}
+.form__holder.concern .button__holder button:disabled {
+    background: rgba(74, 159, 47, 0.3) none repeat scroll 0 0;
+    box-shadow: none;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked), .form__holder.concern .button__holder [type="checkbox"]:checked {
+    left: -9999px;
+    position: absolute;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label, .form__holder.concern .button__holder [type="checkbox"]:checked + label {
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label::before, .form__holder.concern .button__holder [type="checkbox"]:checked + label::before {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #109d31;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    width: 20px;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label::after, .form__holder.concern .button__holder [type="checkbox"]:checked + label::after {
+    color: #09ad7e;
+    content: "?";
+    font-size: 1em;
+    left: 0.4em;
+    line-height: 0.8;
+    position: absolute;
+    top: 0.1em;
+    transition: all 0.2s ease 0s;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
+    transform: scale(0);
+}
+.form__holder.concern .button__holder [type="checkbox"]:checked + label::after {
+    opacity: 1;
+    transform: scale(1);
+}
+.form__holder.card__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.form__holder.card__data h1 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    white-space: pre-line;
+}
+.form__holder.card__data .card__container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.form__holder.card__data .card__container .text__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form__holder.card__data .card__container .text__container span {
+    font-size: 16px;
+    line-height: 1.2;
+    padding-bottom: 20px;
+    text-align: left;
+    white-space: pre-line;
+}
+.form__holder.card__data .card__container .holder {
+    background: rgba(0, 0, 0, 0) url("f24a79eabcc2fcbf59562cd59661b52f.png") no-repeat scroll center center / contain ;
+    height: 205px;
+    margin: 0 0 0 auto;
+    position: relative;
+    width: 300px;
+}
+.form__holder.card__data .card__container .holder .error__message {
+    display: none;
+}
+.form__holder.card__data .card__container .holder input {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: "PT Sans";
+    font-size: 12px;
+    font-weight: 500;
+    height: 27px;
+    padding-left: 10px;
+    position: absolute;
+    text-align: justify;
+    width: 56px;
+}
+.form__holder.card__data .card__container .holder input#number {
+    right: 19px;
+    top: 79px;
+}
+.form__holder.card__data .card__container .holder input#cvc {
+    bottom: 6px;
+    left: 62px;
+}
+.form__holder.card__data .birthDate {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    width: 100%;
+}
+.form__holder.card__data .birthDate span {
+    align-self: center;
+    font-size: 16px;
+    margin-right: auto;
+}
+.form__holder.card__data .birthDate input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #b7b7b7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #a1a1a1;
+    font-family: "PT Sans";
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    text-align: center;
+    width: 116px;
+}
+.form__holder.card__data .birthDate button {
+    margin-left: 15px;
+}
+.form__holder.feedback {
+    padding: 48px 38px;
+}
+.form__holder.feedback h1 {
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 38px;
+    text-align: left;
+}
+.form__holder.feedback p {
+    font-size: 22px;
+    padding-bottom: 28px;
+}
+.form__holder.feedback .row__holder {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.form__holder.feedback .row__holder .input__holder {
+    position: relative;
+}
+.form__holder.feedback .row__holder .input__holder .error__message {
+    color: red;
+    font-size: 13px;
+    left: 55%;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.form__holder.feedback .row__holder input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #b7b7b7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #a1a1a1;
+    font-family: "PT Sans";
+    font-size: 22px;
+    font-weight: 500;
+    height: 56px;
+    padding-left: 18px;
+    text-align: left;
+    width: 378px;
+}
+.form__holder.feedback .row__holder input#name {
+    margin-right: 34px;
+}
+.form__holder.feedback textarea {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #b7b7b7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #a1a1a1;
+    font-family: "PT Sans";
+    font-size: 22px;
+    font-weight: 500;
+    height: 157px;
+    padding: 18px;
+    resize: none;
+    text-align: left;
+    width: 100%;
+}
+.form__holder.feedback .button__container {
+    display: flex;
+    padding-top: 30px;
+}
+.form__holder.feedback .button__container .loader {
+    display: none;
+}
+.form__holder.feedback .button__container.loading .loader {
+    display: block;
+    height: 5em;
+    margin: 0 auto;
+    width: 5em;
+}
+.form__holder.feedback .button__container.loading .loader::after {
+    background: #fff none repeat scroll 0 0;
+}
+.form__holder.feedback .button__container.loading .loader::before {
+    background: #1a9f29 none repeat scroll 0 0;
+    border-radius: 100% 0 0;
+    content: "";
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
+.form__holder.feedback .button__container.loading button {
+    display: none;
+}
+.form__holder.feedback .button__container button {
+    margin: auto;
+}
+.form__holder.nocard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.form__holder.nocard h1 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.form__holder.nocard .card__holder {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form__holder.nocard .card__holder .card {
+    background: rgba(0, 0, 0, 0) url("8bcedcf583f8b827ef9752919b16a54f.png") no-repeat scroll center center / cover ;
+    border-radius: 12px;
+    box-shadow: 0 2px 26px -2px rgba(0, 0, 0, 0.75);
+    height: 100px;
+    width: 161px;
+}
+.form__holder.nocard .card__holder p {
+    font-size: 14px;
+    line-height: 1.3;
+    padding-left: 20px;
+    text-align: left;
+    white-space: pre-line;
+}
+.form__holder.nocard .button__container {
+    display: flex;
+}
+.form__holder.nocard .button__container button {
+    font-size: 17px;
+    margin: auto;
+    padding: 0 10px;
+    width: auto;
+}
+.form__holder.success {
+    padding: 20px;
+}
+.form__holder.success .thumb__up {
+    background: rgba(0, 0, 0, 0) url("c9b744f4c43295a38c71bbe70a63f320.png") no-repeat scroll center center / contain ;
+    height: 65px;
+    margin: auto;
+    width: 65px;
+}
+.form__holder.success h1 {
+    color: #1a9f29;
+    font-size: 32px;
+    padding: 19px 0;
+    text-align: center;
+    white-space: pre-line;
+    width: 100%;
+}
+.form__holder.success p {
+    font-size: 22px;
+    text-align: center;
+    white-space: pre-line;
+}
+.form__holder.success p.padded {
+    padding-top: 24px;
+}
+.form__holder.time {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.form__holder.time .clock {
+    background: rgba(0, 0, 0, 0) url("a2f5f2aef62bc8ac343be6e27d427492.png") no-repeat scroll center center / contain ;
+    height: 60px;
+    margin: auto;
+    width: 60px;
+}
+.form__holder.time h1 {
+    color: #1a9f29;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 10px 0;
+    text-align: center;
+    white-space: pre-line;
+    width: 100%;
+}
+.form__holder.time p {
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    white-space: pre-line;
+    width: 100%;
+}
+.form__holder.time .button__holder {
+    display: flex;
+    margin-top: auto;
+    width: 100%;
+}
+.form__holder.time .button__holder button {
+    margin: auto;
+}
+.form__holder.sber {
+    width: 1100px;
+}
+.form__holder.winners {
+    padding: 66px 130px 40px;
+}
+.form__holder.winners .clock {
+    background: rgba(0, 0, 0, 0) url("a2f5f2aef62bc8ac343be6e27d427492.png") no-repeat scroll center center / contain ;
+    height: 94px;
+    margin: auto;
+    width: 94px;
+}
+.form__holder.winners h1 {
+    color: #1a9f29;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 34px 0 50px;
+    text-align: center;
+    white-space: pre-line;
+    width: 100%;
+}
+.form__holder .social__holder {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 26px;
+    width: 100%;
+}
+.form__holder .social__holder p, .form__holder .social__holder .icons__container {
+    display: inline-block;
+}
+.form__holder .social__holder p {
+    font-size: 14px;
+    max-width: 344px;
+    padding: 0;
+    white-space: normal;
+}
+.form__holder .social__holder .icons__container {
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+}
+.form__holder .social__holder .icons__container span {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 41px;
+    text-align: center;
+    width: 40px;
+}
+.form__holder .social__holder .icons__container span.fb {
+    background-color: #016ecb;
+}
+.form__holder .social__holder .icons__container span.vk {
+    background-color: #0072a4;
+}
+.form__holder .social__holder .icons__container span.ok {
+    background-color: #ffa701;
+}
+.form__holder .tabs__holder {
+    height: 80px;
+    width: 100%;
+}
+.form__holder .tabs__holder.suggest {
+    height: 30px;
+}
+.form__holder form {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+.form__holder form .text__holder {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 60%;
+}
+.form__holder form .text__holder p.suggest {
+    padding: 10px 0 0;
+}
+.form__holder form .text__holder.result {
+    padding: 32px;
+    width: 100%;
+}
+.form__holder form .text__holder.result .suggest {
+    font-size: 15px;
+    padding: 10px 0;
+}
+.form__holder form .text__holder.scaled h1.result {
+    font-size: 25px;
+}
+.form__holder form .text__holder.snoozed h1.result {
+    font-size: 44px;
+    margin-top: 44px;
+}
+.form__holder form h1 {
+    font-size: 32px;
+    font-weight: 700;
+    white-space: pre-line;
+}
+.form__holder form h1.result {
+    font-size: 38px;
+    letter-spacing: 5px;
+    line-height: 1;
+    margin-top: 14px;
+    max-width: 504px;
+    text-transform: uppercase;
+}
+.form__holder form p {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 30px 0 35px;
+    white-space: pre-line;
+}
+.form__holder form p.result {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-bottom: 0;
+    padding-top: 0;
+    white-space: initial;
+}
+.form__holder form p.suggested {
+    padding: 0;
+    white-space: initial;
+}
+.form__holder form .geo {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+.form__holder form .geo::before {
+    background-image: url("c2a67dfba4d009c0153d3a6f6ecf43c2.png");
+    content: "";
+    height: 20px;
+    left: -20px;
+    width: 20px;
+}
+.form__holder form .canvas_holder {
+    border-left: 8px solid #1a9f29;
+}
+.form__holder form .canvas_holder canvas {
+    height: 100%;
+    width: 220px;
+}
+.form__holder form .input__holder {
+    border-left: 8px solid #1a9f29;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 20px 22px;
+    position: relative;
+    width: 40%;
+}
+.form__holder form .input__holder .__row {
+    position: relative;
+}
+.form__holder form .input__holder .__row .error__message {
+    color: #ff5555;
+    font-size: 20px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: -56%;
+    transform: rotate(-90deg);
+    transform-origin: right top 0;
+}
+.form__holder form .input__holder .__row:first-of-type {
+    position: relative;
+}
+.form__holder form .input__holder .__row:first-of-type::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: -38px;
+    width: 100%;
+}
+.form__holder form .input__holder .__row input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #b2b2b2;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: medium medium 2px;
+    color: #b2b2b2;
+    font-family: "PT Sans",sans-serif;
+    font-size: 24px;
+    padding: 0 0 16px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.form__holder form .input__holder .__row input.error {
+    border-bottom-color: #ff5555 !important;
+    color: #ff5555 !important;
+}
+.form__holder form .input__holder .__row input:focus {
+    border-bottom-color: #000;
+    color: #000;
+}
+.form__holder form .input__holder .__row input:not([value=""]):not(:focus) {
+    border-bottom-color: #000;
+    color: #000;
+}
+.ticketRenderer {
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+}
+@media screen and (max-width: 740px) {
+.submit {
+    border-radius: 1vw;
+    font-size: 2.666vw;
+    height: 8.33333vw;
+    width: 27.5556vw;
+}
+.submit.result {
+    box-shadow: -1.33333vw 1.16667vw 3.5vw -1.3333vw rgba(0, 0, 0, 0.68);
+    font-size: 3.33333vw;
+    margin-bottom: -0.6666vw;
+    min-width: 19.8333vw;
+    width: 19.8333vw;
+}
+.submit.result a {
+    color: #fff;
+    text-decoration: none;
+}
+.form__holder.unique {
+    padding: 3vw 3.66667vw 2.66667vw;
+}
+.form__holder.unique h3 {
+    font-size: 4.33333vw;
+}
+.form__holder.unique .cup__holder {
+    padding-bottom: 0vw;
+}
+.form__holder.unique .cup__holder span {
+    background-size: contain;
+    height: 12.3333vw;
+    width: 12.3333vw;
+}
+.form__holder.unique p {
+    font-size: 2.66667vw;
+    padding-top: 2vw;
+}
+.form__holder.unique .button__container {
+    padding: 2vw;
+}
+.form__holder.concern {
+    padding: 3.33333vw;
+}
+.form__holder.concern .promo__holder p {
+    font-size: 2.16667vw;
+}
+.form__holder.concern .promo__holder .code__holder span {
+    font-size: 1.83333vw;
+}
+.form__holder.concern .promo__holder .code__holder .code {
+    font-size: 3.33333vw;
+}
+.form__holder.concern h1 {
+    font-size: 4vw;
+}
+.form__holder.concern h1.promo {
+    font-size: 4.83333vw;
+    padding-top: 4.16667vw;
+}
+.form__holder.concern p {
+    font-size: 2.33333vw;
+}
+.form__holder.concern p.error__message {
+    font-size: 2.33333vw;
+    top: 9.83333vw;
+}
+.form__holder.concern .input__holder--info {
+    padding: 4vw 0 0;
+}
+.form__holder.concern .input__holder--info input {
+    border: 0.166666vw solid #b7b7b7;
+    font-size: 2.66667vw;
+    height: 6.66667vw;
+    padding-left: 3vw;
+}
+.form__holder.concern .input__holder--info input.errored {
+    border-color: red;
+}
+.form__holder.concern .card__holder--select {
+    border: 0.166666vw solid #b7b7b7;
+    height: 10vw;
+    padding: 0 6vw 0 7.33333vw;
+}
+.form__holder.concern .card__holder--select .switch__container {
+    font-size: 2.33333vw;
+    padding-left: 4vw;
+}
+.form__holder.concern .card__holder--select .switch__container label {
+    border-radius: 16.6667vw;
+    height: 3.2vw;
+    margin: 0 8px 0 2px;
+    width: 6.2vw;
+}
+.form__holder.concern .card__holder--select .switch__container label::after {
+    border-radius: 15vw;
+    height: 2.33333vw;
+    right: 0.5vw;
+    top: 0.5vw;
+    width: 2.33333vw;
+}
+.form__holder.concern .card__holder--select .switch__container input:checked + label::after {
+    right: calc(86.6667%);
+    transform: translateX(-100%);
+}
+.form__holder.concern .card__holder--select .card {
+    height: 10vw;
+    width: 16.3333vw;
+}
+.form__holder.concern .button__holder {
+}
+.form__holder.concern .button__holder button {
+    font-size: 3vw;
+    height: 9.33333vw;
+    min-width: 27.6667vw;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label, .form__holder.concern .button__holder [type="checkbox"]:checked + label {
+    padding-left: 6.66667vw;
+}
+.form__holder.concern .button__holder [type="checkbox"]:not(:checked) + label::before, .form__holder.concern .button__holder [type="checkbox"]:checked + label::before {
+    border: 0.33333vw solid #109d31;
+    border-radius: 1.33333vw;
+    box-shadow: 0 0.1666vw 0.5vw rgba(0, 0, 0, 0.1) inset;
+    height: 3.33333vw;
+    top: -1vw;
+    width: 3.33333vw;
+}
+.form__holder.card__data {
+    padding: 3.33333vw;
+}
+.form__holder.card__data h1 {
+    font-size: 6.66667vw;
+    padding-bottom: 6.66667vw;
+}
+.form__holder.card__data .card__container .text__container span {
+    font-size: 2.66667vw;
+    padding-bottom: 3.33333vw;
+}
+.form__holder.card__data .card__container .holder {
+    height: 34.6667vw;
+    width: 50vw;
+}
+.form__holder.card__data .card__container .holder input {
+    border-radius: 1vw;
+    font-size: 2vw;
+    height: 4.5vw;
+    padding-left: 1.66667vw;
+    width: 9.33333vw;
+}
+.form__holder.card__data .card__container .holder input#number {
+    right: 3.16667vw;
+    top: 13.1667vw;
+}
+.form__holder.card__data .card__container .holder input#cvc {
+    bottom: 1vw;
+    left: 10.3333vw;
+}
+.form__holder.card__data .birthDate span {
+    font-size: 2.66667vw;
+}
+.form__holder.card__data .birthDate input {
+    border: 0.16vw solid #b7b7b7;
+    border-radius: 1vw;
+    font-size: 3vw;
+    height: 8.33333vw;
+    width: 19.3333vw;
+}
+.form__holder.card__data .birthDate button {
+    margin-left: 2.9vw;
+}
+.form__holder .social__holder {
+    padding-top: 4.33333vw;
+}
+.form__holder .social__holder p {
+    font-size: 2.33333vw;
+    max-width: 57.3333vw;
+}
+.form__holder .social__holder .icons__container {
+    width: 25.6667vw;
+}
+.form__holder .social__holder .icons__container span {
+    height: 6.66667vw;
+    line-height: 6.83333vw;
+    width: 6.66667vw;
+}
+.form__holder .tabs__holder {
+    height: 13.3333vw;
+    width: 100%;
+}
+.form__holder .tabs__holder.suggest {
+    height: 5vw;
+}
+.form__holder form .text__holder {
+    padding: 3.33333vw;
+}
+.form__holder form .text__holder p.suggest {
+    padding: 1.66667vw 0 0;
+}
+.form__holder form .text__holder.result {
+    padding: 5.4vw;
+}
+.form__holder form .text__holder.result .suggest {
+    font-size: 2.5vw;
+    padding: 1vw 0;
+}
+.form__holder form .text__holder.scaled h1.result {
+    font-size: 4.16667vw;
+}
+.form__holder form .text__holder.snoozed h1.result {
+    font-size: 7.33333vw;
+    margin-top: 7.33333vw;
+}
+.form__holder form h1 {
+    font-size: 5.33333vw;
+}
+.form__holder form h1.result {
+    font-size: 6.33333vw;
+    letter-spacing: 0.83333vw;
+    margin-top: 2.33333vw;
+    text-transform: uppercase;
+}
+.form__holder form p {
+    font-size: 2.1vw;
+    padding: 5vw 0 5.8vw;
+    white-space: pre-line;
+}
+.form__holder form p.result {
+    font-size: 2.33333vw;
+}
+.form__holder form .geo {
+    font-size: 2.66667vw;
+}
+.form__holder form .geo::before {
+    height: 3.33333vw;
+    left: -3.33333vw;
+    width: 3.33333vw;
+}
+.form__holder form .canvas_holder {
+    border-left: 1.33333vw solid #1a9f29;
+}
+.form__holder form .canvas_holder canvas {
+    width: 36.666vw;
+}
+.form__holder form .input__holder {
+    border-left: 1.33333vw solid #1a9f29;
+    padding: 10.6667vw 3.33333vw 3.66667vw;
+}
+.form__holder form .input__holder .__row:first-of-type::before {
+    height: 0.3333vw;
+    top: -11.1765vh;
+}
+.form__holder form .input__holder .__row input {
+    border-bottom: 0.33333px solid #b2b2b2;
+    font-size: 4vw;
+    padding: 0 0 2.6666vw;
+}
+}
+.pagination__holder {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: flex-start;
+}
+.pagination__holder span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 22px;
+    text-align: center;
+    width: 25px;
+}
+.pagination__holder span.active {
+    color: #6eba7a;
+    text-decoration: underline;
+}
+@media screen and (max-width: 740px) {
+.pagination__holder span {
+    font-size: 3.66667vw;
+    width: 4.16667vw;
+}
+}
+html, body {
+    font-family: "PT Sans",sans-serif;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.container {
+    border-radius: 5px;
+    height: 100%;
+    overflow: hidden;
+}
+.holder {
+    align-self: baseline;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}

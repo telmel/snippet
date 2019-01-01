@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="utf-8">
+<title>Info</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Пример использования Server-sent events</h1>
+<div id="result"></div>
+
+<script>
+var source = new EventSource("demo_sse.php");
+    source.onmessage = function(event) {
+        document.getElementById("result").innerHTML += event.data + "<br>";
+};
+
+// конструктор EventSource принимает один аргумент - URL к странице и создает новый обьект EventSource.
+// Тут у нас к примеру URL к php-странице "demo_sse.php"
+// Каждый раз, когда приходит обновление, происходит событие onmessage 
+// Когда случается событие onmessage, в DOM-элемент с id="result" добавляем полученные данные
+// А пыха отправляет с сервера каждые 5 секунд на браузер текст
+
+</script>
+
+</body>
+</html>

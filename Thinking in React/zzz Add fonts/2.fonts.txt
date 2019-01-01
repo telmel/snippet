@@ -1,0 +1,41 @@
+1. Бросаем шрифт в формате woff в папку 
+project\src\js
+
+2. Создаем файл index.css и в него вписываем код
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'fjalla';
+  src: local('fjalla'), url(./fjalla-one-v4-latin-regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'pt_sansregular';
+    font-weight: normal;
+    font-style: normal;
+	src: local('pt_sansregular'), url('./PTS55F-webfont.woff') format('woff');
+}
+
+
+3. В главном файле client.js добавляем строчку вверху
+
+import './index.css';
+
+4. В файле webpack.config.js надо вписать код. 
+Это даст возможность читать шрифты, стили и файлы
+
+{ test: /\.css$/, loader: "style-loader!css-loader" },
+{ 
+	test: /\.(ttf|otf|eot|svg|woff)$/, 
+	loader: 'file-loader?name=fonts/[name].[ext]' 
+}
+
+5. В файле package.json добавить 
+"css-loader": "^0.28.7",
+"file-loader": "^1.1.5",
+"style-loader": "^0.19.0",
+"url-loader": "^0.6.2",

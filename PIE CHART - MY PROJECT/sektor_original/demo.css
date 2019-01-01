@@ -1,0 +1,22 @@
+.content {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 840px;
+}
+
+.examples {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.example {
+	margin: 0px auto;
+}
+
+/* Sektor stuff */
+.Sektor {
+	width: 200px;
+	height: 200px;
+}

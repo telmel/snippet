@@ -1,0 +1,3 @@
+http://www.javascriptkit.com/dhtmltutors/css3-animation-swing.shtml
+
+https://stackoverflow.com/questions/4119912/animate-vector-element-to-swing-like-a-pendulum-with-svg-or-canvas

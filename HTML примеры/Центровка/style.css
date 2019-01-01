@@ -1,0 +1,38 @@
+body {
+  background: #e4e4e4;
+}
+
+#wrap {
+	background: lightgrey;
+	width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+	
+}
+
+#header-top {
+	margin: 55px 0px 70px 0px;
+	position: relative;
+}
+
+#logo {
+  height: 50px;
+  vertical-align: middle;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+  float:right;
+}
+
+li {
+  display: inline;
+  background: #e4e4e4;
+  padding: 0px 20px;
+  margin-left: -5px;
+}
+
+li a {
+	text-decoration: none;
+}

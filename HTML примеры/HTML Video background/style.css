@@ -1,0 +1,41 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  z-index: -10;
+}
+
+.video-container video {
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: 100%    !important;
+  height: auto   !important; 
+}
+
+.center-div
+{
+  position: absolute;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+  background-color: #60d0e0;
+  opacity: 0.8;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.coverage
+{
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #60d0e0;
+  opacity: 0.4;
+  z-index: 2;
+}

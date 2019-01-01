@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Размещение карты с моим адресом на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+function init() {
+    // Создаем карту.
+    var myMap = new ymaps.Map("map", {
+            center: [54.797611, 56.038785],
+            zoom: 13
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+    // Создаем круг.
+    var myCircle = new ymaps.Circle([
+        // Координаты центра круга.
+        [54.797611, 56.038785],
+        // Радиус круга в метрах.
+        1000
+    ], {
+        // Описываем свойства круга.
+        // Содержимое балуна.
+        balloonContent: "Радиус круга - 1 км",
+        // Содержимое хинта.
+        hintContent: "Не подвинешь меня"
+    }, {
+        // Задаем опции круга.
+        // Включаем возможность перетаскивания круга.
+        draggable: false,
+        // Цвет заливки.
+        // Последний байт (77) определяет прозрачность.
+        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+        fillColor: "#DB709320",
+        // Цвет обводки.
+        strokeColor: "#20B2AA",
+        // Прозрачность обводки.
+        strokeOpacity: 0.8,
+        // Ширина обводки в пикселях.
+        strokeWidth: 2
+    });
+
+    // Добавляем круг на карту.
+    myMap.geoObjects.add(myCircle);
+	
+	
+	
+	
+	
+	
+	
+	// Создаем круг.
+    var myCircle = new ymaps.Circle([
+        // Координаты центра круга.
+        [54.797611, 56.038785],
+        // Радиус круга в метрах.
+        2000
+    ], {
+        // Описываем свойства круга.
+        // Содержимое балуна.
+        balloonContent: "Радиус круга - 2 км",
+        // Содержимое хинта.
+        hintContent: "Не подвинешь меня"
+    }, {
+        // Задаем опции круга.
+        // Включаем возможность перетаскивания круга.
+        draggable: false,
+        // Цвет заливки.
+        // Последний байт (77) определяет прозрачность.
+        // Прозрачность заливки также можно задать используя опцию "fillOpacity".
+        fillColor: "#80800020",
+        // Цвет обводки.
+        strokeColor: "#9ACD32",
+        // Прозрачность обводки.
+        strokeOpacity: 0.8,
+        // Ширина обводки в пикселях.
+        strokeWidth: 2
+    });
+
+    // Добавляем круг на карту.
+    myMap.geoObjects.add(myCircle);
+	
+	
+
+
+
+
+
+
+
+var myGeoObject = new ymaps.GeoObject({
+        // Описываем геометрию типа "Точка".
+        geometry: {
+            type: "Point",
+            coordinates: [54.797611, 56.038785]
+        },
+        // Описываем данные геообъекта.
+        properties: {
+            hintContent: "Москва",
+            balloonContentHeader: "Москва",
+            balloonContentBody: "Столица России",
+            population: 11848762
+        }
+    }, {
+        // Задаем пресет метки с точкой без содержимого.
+        preset: "twirl#redDotIcon",
+        // Включаем возможность перетаскивания.
+        draggable: false,
+        // Переопределяем макет содержимого нижней части балуна.
+        balloonContentFooterLayout: ymaps.templateLayoutFactory.createClass(
+            'население: $[properties.population], координаты: $[geometry.coordinates]'
+        ),
+        // Отключаем задержку закрытия всплывающей подсказки.
+        hintHideTimeout: 0
+    });
+// Добавляем геообъект на карту.
+myMap.geoObjects.add(myGeoObject);
+
+}
+
+
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 100%; height: 400px"></div>
+</body>
+
+</html>

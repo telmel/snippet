@@ -1,0 +1,86 @@
+1 Начинаем со следующей HTML-страницы. Здесь уже подключен bootstrap
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+
+2. Добавляем сюда навигацию
+
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <div class="container">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">Logo</a>
+  <!-- Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Links -->
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#about">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#services">SERVICES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link" href="#pricing">PRICING</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </li>
+  </ul>
+  </div>
+  </div>
+</nav>
+
+
+
+3. Добавляем стили для навигации:
+
+<style>
+.navbar {
+    background-color: green;
+    font-size: 12px !important;
+    letter-spacing: 4px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #d8d8d8 !important;
+}
+</style>
+
+
+
+4 Добавляем джамбатрон(Для центровки текста нужно добавить text-center)
+
+<div class="jumbotron text-center">
+  <h1>Company</h1>
+  <p>We specialize in blablabla</p>
+</div>
+
+5. Добавляем джамбатрону паддинги чтобы он стал шире.По желанию можно добавить цвет фона и текста
+<style>
+.jumbotron {
+	padding: 100px 25px;
+}
+</style>

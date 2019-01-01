@@ -1,0 +1,6 @@
+var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+circle.setAttributeNS(null, 'cx', width);
+circle.setAttributeNS(null, 'cy', height);
+circle.setAttributeNS(null, 'r', 1);
+circle.setAttributeNS(null, 'style', 'fill: yellow;' );
+container.appendChild(circle);

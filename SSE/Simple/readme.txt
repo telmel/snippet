@@ -1,0 +1,2 @@
+This is a small example of Server-sent events with usage of EventSource object. 
+It has a server side script on PHP that sends notifivations and frontend html and javascript that receives them. It is one way process

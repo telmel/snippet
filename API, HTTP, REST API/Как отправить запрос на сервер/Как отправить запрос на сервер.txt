@@ -1,0 +1,21 @@
+Как отправить запрос на сервер
+
+Сделать запрос на сервер можно при помощи метода fetch() или старого XMLHttpRequest
+Давайте начнём с простого примера, реализованного с fetch. 
+Запрос делается на какой нибудь URL.
+Далее после того, как запрос сделан, можно получить ответ и распарсить его как JSON
+
+Наш fetch запрос будет выглядеть так:
+
+fetch('./api/some.json')  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.log('Looks like there was a problem. Status Code: ' + response.status);  
+        return;  
+      }
+      // Examine the text in the response  
+      response.json().then(function(data) { console.log(data); });  
+    }  
+  )  
+  .catch(function(err) { console.log('Fetch Error :-S', err);  });

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Circle</title>
+<style>
+html, body { height: 100%; margin: 0; border:0; }
+#container { width: 500px; height: 500px; background-color: LightSteelBlue; box-sizing: border-box; position: relative; margin: auto; overflow: hidden !important; }
+</style>
+</head>
+<body>
+<div id="container">
+<svg class="sea" height="500" width="500"></svg>
+</div>
+
+<script type="text/javascript">
+
+// Генерируем массив с длиной от 2 до 11 
+var integer = Math.floor(Math.random() * 10) + 2;
+var seas = new Array(integer).fill(0);
+
+</script>
+
+<script type="text/javascript">
+
+// получить DOM элемент для тега svg - это контейнер
+var container = document.querySelector('.sea');
+
+var w = document.getElementById('container').clientWidth;
+var h = document.getElementById('container').clientHeight;
+
+// подсчитываем динамически координаты центральной точки контейнера
+var width = w/2;   //  width - это координата центральной точки
+var height = h/2;    //  height - это координата центральной точки
+var radius = 0.5 * width;  // здесь считаем радиус это 125 в данном случае
+var step = 2 * Math.PI / seas.length;  // это значение может быть 1.57 а может 0.26
+var angle = -90 * Math.PI / 180;  // это значение всегда равно -1.57
+
+// обработка массива. Вызываем неск раз функцию с аргументом - узел:
+// вычисляем x и y для каждого угла
+seas.forEach(function(element){
+	
+	const [startX, startY] = getCoordinatesForAngle(angle);
+	angle = angle + step;
+	const [endX, endY] = getCoordinatesForAngle(angle);
+	
+	// if the slice is more than 180%, take the large arc (the long way around) Not working!!!!!
+	const largeArcFlag = 0;
+	
+	//   координаты начальной точки дуги эллипса Move to this point
+	//  радиус дуги эллипса, радиус дуги эллипса, угол поворота дуги эллипса относительно оси абцисс
+	const pathData = `
+	M ${startX} ${startY}    
+	A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY}  
+	L 250 250
+	Z
+	`;
+	
+	const pathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	pathEl.setAttribute('d', pathData);
+	
+	var random_color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+	pathEl.setAttribute('fill', random_color);
+	
+	pathEl.setAttribute('stroke','black');
+	pathEl.setAttribute('stroke-width','5');
+	container.appendChild(pathEl);
+	
+});
+
+// Принимаем угол и вычисляем координаты
+function getCoordinatesForAngle(angle) {
+  var x = width + radius * Math.cos(angle);
+  var y = height + radius * Math.sin(angle);
+  return [x, y];
+}
+
+</script>
+
+</body>
+</html>

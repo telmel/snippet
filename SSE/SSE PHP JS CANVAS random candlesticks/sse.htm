@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="utf-8">
+<title>Info</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h3>PHP sends JSON random array through SSE. JS reads data and draw on canvas</h3>
+<canvas id="canvas" width="1000" height="500"></canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var x = 0;
+var source = new EventSource("demo_sse.php");
+ 
+
+    source.onmessage = function(event) {
+	var data = JSON.parse(event.data);
+    x = x + 5;
+	var yopen = data[0];
+	var yclose = data[1];
+	
+	
+	ctx.strokeStyle = "Turquoise";
+	ctx.lineWidth = 5;
+	ctx.beginPath();
+	ctx.moveTo( x, yopen );
+	ctx.lineTo( x, yclose );
+	ctx.stroke();
+	
+	
+};
+
+// конструктор EventSource принимает один аргумент - URL к странице и создает новый обьект EventSource.
+// Тут у нас к примеру URL к php-странице "demo_sse.php"
+// Каждый раз, когда приходит обновление, происходит событие onmessage 
+// Когда случается событие onmessage, parsim dannie i risuem s nimi liniju na canvas
+// А пыха отправляет с сервера каждые 0.25 секунд на браузер array
+
+</script>
+
+</body>
+</html>
