@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      var demo = document.getElementById("demo");
+      // 1. Создаём новый объект XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+      // Get 1 random user
+      const url = "https://randomuser.me/api/?results=1";
+
+      // 2. Конфигурируем его: GET-запрос на URL 'phones.json'
+      xhr.open("GET", url, true);
+      console.log("OPENED: ", xhr.status);
+
+      xhr.onprogress = function() {
+        console.log("LOADING: ", xhr.status);
+      };
+
+      xhr.onload = function() {
+        console.log("DONE: ", xhr.status);
+      };
+
+      // 3. Отсылаем запрос
+      xhr.send();
+
+      // 4. Если код ответа сервера не 200, то это ошибка
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+          console.log(xhr.status);
+        } else {
+          var obj = JSON.parse(xhr.response);
+          console.log(obj);
+          var author = obj.results[0];
+          var img = document.createElement("img");
+          img.src = author.picture.large;
+          demo.innerHTML = `${author.name.first} ${author.name.last}<br>`;
+          demo.appendChild(img);
+        }
+      };
+    </script>
+  </body>
+</html>
