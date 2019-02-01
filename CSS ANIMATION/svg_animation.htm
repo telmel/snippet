@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SVG Animation</title>
+    <style>
+      svg { border: 3px solid #eee; display: block; margin: 1em auto; background-color: #F0F0F0}
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="500">
+      <circle id="orange-circle" r="75" cx="100" cy="100" fill="#FC2C39" />
+      <animate href="#orange-circle" attributeName="cx" from="100" to="400" dur="2s" begin="click" fill="freeze" id="circAnim" /> 
+    </svg>
+  </body>
+</html>
+
+

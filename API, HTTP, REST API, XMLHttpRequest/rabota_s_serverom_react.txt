@@ -1,0 +1,86 @@
+
+
+1. vijasnaem chto za api u nas takoe.rabotaet li. pishem v konsoli
+var url = 'https://randomuser.me/api/?results=1'; 
+const response = fetch(url);
+var json = response.json();
+console.log(json)
+
+zapros prohodit. vozvrashaetsa promis i vskore prihodit response so status 200
+
+2. eshe raz shlem zapros i tut uzhe prihodit dannie kotorie mi razparsim.Poluchim normalnij object.
+Object { status: "ok", message: {…} }
+
+
+ili
+
+var url = 'https://uxcandy.com/~shapoval/test-task-backend/?developer=sait';
+var response = await fetch(url);
+var responseBody = await response.json(); // here we have an object with info that came from server
+console.log(responseBody);
+
+3. obvorachivaem vse v provider 
+ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById("root"));
+
+4. pishem bazovij reducer i sozdaem store
+
+const reducer = (state = [], action) => {
+      return state;
+};
+
+const store = createStore(reducer, applyMiddleware(thunk));
+
+5. pishem bazovuu podpisku na store -    mapstatetoprops i connect i obvorachivaem komponent v kontejner
+
+const mapStateToProps = state => ({ repos: state });
+const AppContainer = connect(mapStateToProps)(App);
+
+
+6. propisyvaem v rendere Appcontainer
+
+ReactDOM.render(<Provider store={store}><AppContainer/></Provider>, document.getElementById("root"));
+
+7.
+Teper u nas komponent podpisan na izmenenija, mozno konsolit v komponente che tam prihodit kazdij raz
+console.log(props.tasks);       // Array []
+
+8. Shas nado budet initial state naverno propisat. A to pusto v hranilishe. I potom v reducere propisat const reducer = (state = initialState, action)
+
+var initialState = {
+        "status": "ok",
+        "message": {
+            "tasks": [
+                {
+                    "id": 1,
+                    "username": "Test User",
+                    "email": "test_user_1@example.com",
+                    "text": "Hello, world!",
+                    "status": 10,
+                },
+                {
+                    "id": 3,
+                    "username": "Test User 2",
+                    "email": "test_user_2@example.com",
+                    "text": "Hello from user 2!",
+                    "status": 0,
+                },
+                {
+                    "id": 4,
+                    "username": "Test User 3",
+                    "email": "test_user_3@example.com",
+                    "text": "Hello from user 3!",
+                    "status": 0,
+                }
+            ],
+            "total_task_count": "5"
+        }
+	}
+	
+Posle etogo budet na avtomate konsolitsa object iz store
+9. Teper pishem komponent Item kotoryj prinimaet dannie dla taska i renderit task
+a potom vynosim vse delo iz App v Item, a v App pishem map logika lista kak u amerikanca
+vinosim koroche vse iz App v List i Item pres komponenti
+
+
+
+

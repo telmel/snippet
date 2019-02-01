@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+  <div id="example"></div>
+ <script>
+ //var url = 'http://ec2-54-162-4-53.compute-1.amazonaws.com:8080/vest/v1/stats?code=gc&rangeStart=2015-01-01&rangeEnd=2018-10-30&periodStart=2017-01-01&periodEnd=2018-03-01';
+ var url = 'http://ec2-54-84-182-191.compute-1.amazonaws.com:8080/vest/v1/charts?code=gc&rs=2017-01-01&re=2017-12-31';
+ fetch(url)
+  .then(function(response) { return response.json(); })
+  .then(function(myJson) { document.getElementById('example').innerHTML = JSON.stringify(myJson); });     // insert the text sent by the server into the HTML div
+</script> 
+  </body>
+</html>
