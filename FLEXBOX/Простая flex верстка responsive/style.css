@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+    margin: 0;
+	padding: 0;
+}
+
+/**
+ * Header
+ */
+
+.header {
+  display: flex;
+  background-color: #bfbfbf;
+  padding: 20px 20px;
+}
+
+.logotype {
+	height:150px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 10px 10px;
+  }
+  .logotype {
+	height:50px;
+  }
+}
+
+/**
+ * Navigation
+ */
+
+.navigation {
+  background-color: #000;
+  display: flex;
+}
+
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	background-color: #cccccc;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.cell {
+	height: 45px;
+	padding: 0px 10px 0px 10px;
+}
+
+.nav-links {
+	display: block;
+	color: #000;
+	font-size: 18px;
+	text-decoration: none;
+	height: 45px;
+	line-height: 45px;
+	
+}
+
+@media (max-width: 800px) {
+	.navigation {
+    height: 30px;
+	}
+	.main-nav {
+	margin:0;
+	padding:0;
+	}
+
+	.cell {
+	height: 30px;
+	padding: 0px 10px 0px 10px;
+	}
+
+	.nav-links {
+	font-size: 15px;
+	height: 30px;
+	line-height: 30px;
+
+	}
+}
+
+/**
+ * Main part of website
+ */
+
+.main-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 70%;
+  max-width: 70%;
+  background-color: #d8d8d8;
+  margin: 0;
+  padding:0;
+}
+
+.info {
+  background-color: #f2f2f2;
+  border: 3px dotted grey;
+  padding: 30px 10px;
+}
+
+.sidebar {
+  flex: 30%;
+  max-width: 30%;
+  margin: 0;
+}
+
+.widget {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 30px 10px 30px 10px;
+  border: 3px dashed grey;
+}
+
+@media (max-width: 800px) {
+  .content {
+    flex: 100%;
+    max-width: 100%;
+  }
+  
+  .info {
+	padding: 20px 10px;
+  }
+  
+  .sidebar {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .widget {
+	  width: 100%;
+	  
+  }
+}
+
+/**
+ * Footer part of website
+ */
+
+.site-footer {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  padding: 50px 10px;
+}
+
+@media (max-width: 800px) {
+  .site-footer {
+	
+  }
+  .inner {
+	width: 100%;
+	padding: 25px 10px;
+  }
+}

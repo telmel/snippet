@@ -1,0 +1,1 @@
+Excellent example how to make torn edge with svg
